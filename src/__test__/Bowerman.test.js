@@ -1,4 +1,4 @@
-import Bowerman from '../Bowerman';
+import Bowerman from '../js/Bowerman';
 
 test('Check create character "Bowerman"', () => {
   const testBowerman = new Bowerman('Fedia', 'Bowman');

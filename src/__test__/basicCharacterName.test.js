@@ -1,4 +1,4 @@
-import Character from '../basicCharacter';
+import Character from '../js/basicCharacter';
 
 test('Check character with invalid name', () => {
   expect(() => new Character('A', 'Bowman')).toThrow('Invalid name');

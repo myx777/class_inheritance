@@ -1,4 +1,4 @@
-import Daemon from '../Daemon';
+import Daemon from '../js/Daemon';
 
 test('Check create character "Daemon"', () => {
   const testDaemon = new Daemon('Fedia', 'Daemon');
