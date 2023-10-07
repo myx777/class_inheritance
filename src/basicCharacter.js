@@ -1,12 +1,15 @@
 export default class Character {
   constructor(name, type) {
-    this.name = this.characterName(name);
-    this.type = this.typeName(type);
+    this.name = name;
+    this.type = type;
     this.health = 100;
     this.level = 1;
+
+    this.validateName();
+    this.validateType();
   }
 
-  static typeName(type) {
+  validateType() {
     const legacyType = [
       'Bowman',
       'Swordsman',
@@ -15,16 +18,14 @@ export default class Character {
       'Undead',
       'Zombie',
     ];
-    if (!legacyType.includes(type)) {
+    if (!legacyType.includes(this.type)) {
       throw new Error('Invalid type');
     }
-    return type;
   }
 
-  static characterName(name) {
-    if (name.length < 2 || name.length > 10) {
+  validateName() {
+    if (this.name.length < 2 || this.name.length > 10) {
       throw new Error('Invalid name');
     }
-    return name;
   }
 }
